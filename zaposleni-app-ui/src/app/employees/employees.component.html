@@ -1,0 +1,23 @@
+<div class="bg-container">
+    <div class="employee-controls">
+        <h1>{{ filteredEmployees.length }} Employees found</h1>
+        <div class="view-switch" (click)="switchView()">
+            <div class="list-view" [ngClass]="listView ? 'active' : null">
+                <fa-icon [icon]="faBars" size="lg"></fa-icon>
+            </div>
+            <div class="grid-view" [ngClass]="listView ? null : 'active'">
+                <fa-icon [icon]="faThLarge" size="lg"></fa-icon>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="!errorMsg" class="content">
+        <app-employee-list *ngIf="listView" [employees]="filteredEmployees" (changedSort)="sortChange($event)"></app-employee-list>
+        <app-employee-grid *ngIf="!listView" [employees]="filteredEmployees"></app-employee-grid>
+    </div>
+
+    <div *ngIf="errorMsg" class="error">
+        <div class="error-icon"><fa-icon [icon]="faExclamationCircle" size="3x"></fa-icon></div>
+        <div class="error-text">{{ errorMsg }}</div>
+    </div>
+</div>

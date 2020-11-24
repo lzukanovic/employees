@@ -1,0 +1,77 @@
+<div *ngIf="!errorMsg" class="container">
+    <header></header>
+    <div class="header-container">
+        <div class="title-container">
+            <div class="img-container">
+                <img class="avatar" [src]="ImgSrcLarge" alt="User avatar">
+            </div>
+            <div class="title">
+                <div class="title-name">{{ employee?.name }}</div>
+                <div class="title-position">{{ employee?.position | uppercase}}</div>
+            </div>
+        </div>
+        <div class="button-container">
+            <div [routerLink]="['/employees', id, 'edit']" class="edit-button">Edit</div>
+            <div class="delete-button" (click)="deleteEmployee()">Delete</div>
+        </div>
+    </div>
+
+    <section>
+        <div class="card contact-info">
+            <div class="card-container">
+                <div>
+                    <fa-icon [icon]="faEnvelope" size="sm"></fa-icon>
+                    <span class="contact-info-text">{{ employee?.email }}</span>
+                </div>
+                <div *ngIf="employee.mobile_number">
+                    <fa-icon [icon]="faPhoneAlt" size="sm"></fa-icon>
+                    <span class="contact-info-text">{{ employee?.mobile_number }}</span>
+                </div>
+                <div>
+                    <fa-icon [icon]="faCalendarAlt" size="sm"></fa-icon>
+                    <span class="contact-info-text">{{ employee?.birthday | date:'mediumDate' }} ({{ employee?.age }} years old)</span>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="card-title">Superior:</div>
+            <div class="card">
+                <div class="card-container superior">
+                    <img [src]="ImgSrcSmall" alt="Employee superior avatar">
+                    <div class="contact-info-text">
+                        <div class="superior-info-normal">{{ employee?.superior_name }}</div>
+                        <div *ngIf="employee.superior_position" class="superior-info-small">{{ employee?.superior_position | uppercase }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div *ngIf="employee.address_city || employee.address_street">
+            <div class="card-title">Address:</div>
+            <div class="card address">
+                <div #mapContainer id="map"></div>
+                <div class="address-text">
+                    <span class="work-info-strong">{{ employee?.address_street }}</span><br />
+                    {{ employee?.address_city }}
+                </div>
+            </div>
+        </div>
+        <div *ngIf="employee.employment_date || employee.salary">
+            <div class="card-title">Work:</div>
+            <div class="card work-info">
+                <div class="card-container">
+                    <span class="work-info-strong">Employed Since: </span>{{ employee?.employment_date | date:'longDate' }}<br />
+                    <span class="work-info-strong">Income/year: </span>{{ employee?.salary | currency:'USD':'symbol':'4.2-2' }}
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<div *ngIf="errorMsg" class="error-container">
+    <div class="error">
+        <div class="error-icon"><fa-icon [icon]="faExclamationCircle" size="3x"></fa-icon></div>
+        <div class="error-text">{{ errorMsg }}</div>
+    </div>
+</div>

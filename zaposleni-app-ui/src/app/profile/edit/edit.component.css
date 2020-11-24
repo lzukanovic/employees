@@ -1,0 +1,319 @@
+.container {
+    background-color: var(--white);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    box-shadow: 2px 0px 4px 0px rgba(0,0,0,0.15),
+                -2px 0px 4px 0px rgba(0,0,0,0.15);
+    min-height: 80vh;
+    margin: 10px 15% 0 15%;
+    padding: 12px 12px 20px 12px;
+}
+.container header {
+    background-color: var(--blue);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 100px;
+    width: 100%;
+}
+.container .header-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 5%;
+}
+
+.title-container {
+    display: flex;
+}
+.title-container .avatar {
+    border-radius: 50%;
+    box-sizing: border-box;
+    background-color: var(--white);
+    border: 9px solid var(--white);
+    position: relative;
+    top: -50px;
+    width: 150px;
+}
+input[type="file"] {
+    display: none;
+}
+
+.button-container {
+    display: flex;
+    margin-top: 25px;
+}
+
+.button-container .cancel-button {
+    align-items: center;
+    background-color: var(--blue);
+    border-radius: 5px;
+    color: var(--white);
+    cursor: pointer;
+    display: flex;
+    height: 42px;
+    justify-content: center;
+    width: 120px;
+}
+
+.button-container .save-button {
+    align-items: center;
+    background-color: var(--save);
+    border-radius: 5px;
+    color: var(--white);
+    cursor: pointer;
+    display: flex;
+    height: 42px;
+    justify-content: center;
+    margin-left: 1.5em;
+    width: 120px;
+}
+
+section {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+section .inputs {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+}
+
+label {
+    color: var(--black-gray);
+    display: flex;
+    justify-content: space-between;
+}
+
+input {
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.20);
+    color: var(--black-gray);
+    font-size: inherit;
+    margin-bottom: 1em;
+    padding: 5px;
+    width: 50%;
+}
+input:focus {
+    outline: none;
+}
+.ng-invalid.ng-touched {
+    border-left: 3px solid var(--delete);
+    margin-bottom: 0;
+}
+
+.input-error {
+    align-self: flex-end;
+}
+.input-error-text {
+    font-size: 12px;
+    margin-top: 3px;
+    margin-bottom: 1em;
+}
+/* #address-input {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+} */
+
+.error-container {
+    align-items: flex-start;
+    background-color: var(--white);
+    border-radius: 7px;
+    box-shadow: 2px 0px 4px 0px rgba(0,0,0,0.15),
+                -2px 0px 4px 0px rgba(0,0,0,0.15);
+    display: flex;
+    justify-content: center;
+    margin: 0 5%;
+    padding: 10px;
+}
+
+.error {
+    display: flex;
+    justify-content: center;
+    margin: 30px 15%;
+}
+
+.error-icon {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: var(--delete);
+    border-radius: 7px;
+    color: var(--white);
+    padding: 10px 20px 0 20px;
+}
+
+.error-text {
+    background-color: var(--delete);
+    border-radius: 7px;
+    color: var(--white);
+    padding: 40px;
+
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
+@media only screen and (min-width: 1400px) {
+    .container {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        margin: 10px 25% 0 25%;
+        padding: 15px 15px 20px 15px;
+    }
+    .container header {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        height: 120px;
+    }
+    .container .header-container {
+        margin: 0 8%;
+    }
+    .title-container .avatar {
+        border: 11px solid var(--white);
+    }
+
+    .button-container {
+        font-size: 17px;
+    }
+    .button-container .cancel-button {
+        height: 45px;
+        width: 125px;
+    }
+    .button-container .save-button {
+        height: 45px;
+        margin-left: 1.5em;
+        width: 125px;
+    }
+
+    section {
+        font-size: 18px;
+    }
+
+    .error {
+        font-size: 19px;
+    }
+}
+
+@media only screen and (min-width: 1200px), (max-width: 1200px) {
+    .container {
+        margin: 10px 10% 0 10%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .container {
+        margin: 10px 5% 0 5%;
+    }
+    .button-container .cancel-button {
+        width: 100px;
+    }
+    .button-container .save-button {
+        width: 100px;
+    }
+    
+    section .inputs {
+        width: 40vw;
+    }
+    .error {
+        margin: 30px 5%;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .container {
+        border-radius: 0;
+        box-shadow: none;
+        padding: 15px 15px 20px 15px;
+        margin: 10px 0 0 0;
+    }
+    .container header {
+        height: 130px;
+    }
+    .title-container .avatar {
+        border: 10px solid var(--white);
+    }
+    
+    section {
+        align-items: center;
+        flex-direction: column;
+        /* justify-content: center; */
+    }
+    section div{
+        margin-bottom: 2em;
+    }
+    section .inputs {
+        width: 70vw;
+    }
+    .error-container {
+        border-radius: 0;
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .button-container .cancel-button {
+        height: 37px;
+        width: 80px;
+    }
+    .button-container .save-button {
+        height: 37px;
+        width: 80px;
+    }
+}
+@media only screen and (max-width: 570px) {
+    .container .header-container {
+        align-items: center;
+        flex-direction: column;
+    }
+    .title-container {
+        flex-direction: column-reverse;
+    }
+    .title-container .avatar {
+        border: 10px solid var(--white);
+        top: -70px;
+    }
+    
+    .button-container {
+        /* margin-bottom: 2em; */
+        position: relative;
+        top: -60px;
+    }
+    .button-container .cancel-button {
+        width: 25vw;
+    }
+    .button-container .save-button {
+        width: 25vw;
+    }
+}
+@media only screen and (max-width: 420px) {
+    .container header {
+        height: 100px;
+    }
+    section .inputs {
+        width: 100%;
+    }
+    #address-label {
+        margin: 0;
+    }
+    label {
+        /* align-items: center; */
+        display: flex;
+        flex-direction: column;
+    }
+    label .label-text {
+        margin-bottom: 10px;
+    }
+    input {
+        width: 90%;
+    }
+}

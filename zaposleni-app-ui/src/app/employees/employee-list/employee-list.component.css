@@ -1,0 +1,147 @@
+table {
+    border-spacing:0;
+    width: 100%;
+}
+
+table th {
+    background-color: var(--white);
+    color: var(--gray);
+    font-weight: normal;
+    overflow: hidden;
+    word-break: normal;
+    padding: 10px 5px;
+    text-align: left;
+    vertical-align: top;
+}
+
+table tr {
+    cursor: pointer;
+}
+table tr:focus {
+    outline: none;
+}
+
+table td {
+    background-color: var(--white);
+    color: var(--black-gray);
+    height: 100%;
+    overflow: hidden;
+    padding: 10px 5px;
+    text-align: left;
+    word-break: normal;
+}
+
+td img {
+    height: 30px;
+    margin-left: 15px;
+    width: 30px;
+}
+
+table .tr-shade {
+    background-color: var(--light-shade);
+}
+table .tr-light {
+    background-color: var(--white);
+}
+
+table .column-center {
+    text-align: center;
+}
+
+/* Compressed list styles */
+#compressed-list {
+    display: none;
+}
+.row {
+    align-items: center;
+    color: var(--black-gray);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: 7px 0;
+    width: 100%;
+}
+.row-shade {
+    background-color: var(--light-shade);
+}
+.row-light {
+    background-color: var(--white);
+}
+.data-1 {
+    align-items: center;
+    display: flex;
+    margin-left: 2.5em;
+}
+.data-1 img {
+    height: 40px;
+    width: 40px;
+}
+.data-email {
+    color: var(--dark-gray);
+    font-size: 14px;
+}
+
+.data-2 {
+    align-items: center;
+    display: flex;
+    margin-right: 2.5em;
+    position: relative;
+}
+.data-text {
+    margin-left: 2em;
+}
+.divider {
+    background-color: var(--black-gray);
+    height: 25px;
+    position: absolute;
+    right: 10em;
+    width: 1px;
+}
+.position {
+    font-size: 14px;
+}
+
+@media only screen and (min-width: 1600px) {
+    table th{
+        font-size: 16px;
+    }
+    table td{
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    table {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 570px) {
+    table {
+        display: none;
+    }
+    #compressed-list {
+        display: initial;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    .divider {
+        right: 8.5em;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .data-text, .position {
+        margin-left: 1em;
+    }
+    .data-name {
+        font-size: 15px;
+    }
+    .divider {
+        display: none;
+    }
+    .position {
+        font-size: 13px;
+    }
+}

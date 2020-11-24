@@ -1,0 +1,144 @@
+.bg-container {
+    background-color: var(--white);
+    min-height: 80vh;
+    padding: 20px 0;
+}
+
+.employee-controls {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+h1 {
+    color: var(--dark-gray);
+    font-weight: 600;
+    margin: 0;
+}
+
+.view-switch {
+    align-items: center;
+    background-color: var(--gray);
+    border-radius: 5px;
+    color: var(--dark-gray);
+    display: flex;
+    justify-content: space-around;
+    height: 36px;
+    width: 85px;
+}
+
+.active {
+    background-color: var(--white);
+    border-radius: 5px;
+    color: var(--gray);
+}
+
+.list-view, .grid-view {
+    padding: 4px 7px;
+}
+
+.content {
+    margin: 30px 15%;
+}
+
+.error {
+    display: flex;
+    justify-content: center;
+    margin: 30px 15%;
+}
+
+.error-icon {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: var(--delete);
+    border-radius: 7px;
+    color: var(--white);
+    padding: 10px 20px 0 20px;
+}
+
+.error-text {
+    background-color: var(--delete);
+    border-radius: 7px;
+    color: var(--white);
+    padding: 40px;
+
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
+@media only screen and (min-width: 1400px) {
+    .error {
+        font-size: 19px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    h1 {
+        font-size: 20px;
+    }
+    
+    .content {
+        margin: 30px 8%;
+    }
+    .view-switch {
+        height: 30px;
+        width: 65px;
+    }
+    .list-view, .grid-view {
+        font-size: 13px;
+        padding: 3px 5px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .content {
+        margin: 30px 6%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .content {
+        margin: 30px 0;
+    }
+    h1 {
+        font-size: 18px;
+    }
+    .employee-controls {
+        margin-top: 0;
+    }
+    .error {
+        margin: 30px 5%;
+    }
+}
+
+/* @media only screen and (max-width: 570px) {
+    .content {
+        margin: 30px 0;
+    }
+} */
+
+@media only screen and (max-width: 400px) {
+    h1 {
+        font-size: 16px;
+    }
+    .error {
+        margin: 30px 2%;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    h1 {
+        font-size: 14px;
+    }
+}

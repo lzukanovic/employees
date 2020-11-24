@@ -1,0 +1,375 @@
+.container {
+    background-color: var(--white);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    /* border-radius: 7px; */
+    box-shadow: 2px 0px 4px 0px rgba(0,0,0,0.15),
+                -2px 0px 4px 0px rgba(0,0,0,0.15);
+    min-height: 80vh;
+    margin: 10px 15% 0 15%;
+    padding: 12px 12px 20px 12px;
+}
+
+.container header {
+    background-color: var(--blue);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 100px;
+    width: 100%;
+}
+
+.container .header-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 5%;
+}
+
+.title-container {
+    display: flex;
+}
+
+/* .title-container img {
+    width: 135px;
+    height: 135px;
+} */
+
+.title-container .avatar {
+    border-radius: 50%;
+    box-sizing: border-box;
+    background-color: var(--white);
+    border: 9px solid var(--white);
+    position: relative;
+    top: -50px;
+}
+
+.title-container .title {
+    align-self: center;
+    margin-left: 1em;
+    position: relative;
+    top: -83px;
+}
+
+.title-container .title .title-name {
+    color: var(--white);
+    font-size: 23px;
+    font-weight: 600;
+}
+.title-container .title .title-position {
+    color: var(--dark-gray);
+    font-size: 14px;
+    margin-top: 3px;
+}
+
+.button-container {
+    display: flex;
+    margin-top: 25px;
+}
+
+.button-container .edit-button {
+    align-items: center;
+    background-color: var(--blue);
+    border-radius: 5px;
+    color: var(--white);
+    cursor: pointer;
+    display: flex;
+    height: 42px;
+    justify-content: center;
+    width: 120px;
+}
+.button-container .edit-button:focus {
+    outline: none;
+}
+
+.button-container .delete-button {
+    align-items: center;
+    background-color: var(--delete);
+    border-radius: 5px;
+    color: var(--white);
+    cursor: pointer;
+    display: flex;
+    height: 42px;
+    justify-content: center;
+    margin-left: 1.5em;
+    width: 120px;
+}
+
+section {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 3em;
+}
+
+.card-title {
+    color: var(--black-gray);
+    font-size: 18px;
+    margin-bottom: 0.5em;
+}
+
+.card {
+    border-radius: 7px;
+    box-shadow: 0px 2px 8px 1px rgba(0,0,0,0.15);
+    color: var(--dark-gray);
+    /* padding: 15px 30px; */
+    /* width: 350px; */
+    width: 25vw;
+}
+
+.card-container {
+    padding: 15px 30px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.contact-info div {
+    margin-bottom: 5px;
+}
+.contact-info-text {
+    margin-left: 1em;
+}
+
+.superior {
+    align-items: center;
+    display: flex;
+}
+.superior .superior-info-small {
+    font-size: 14px;
+}
+
+.address #map {
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    height: 250px;
+    width: 100%;
+}
+.address .address-text {
+    padding: 1em 30px;
+    /* margin-top: 1em; */
+}
+
+.work-info-strong {
+    font-weight: 600;
+}
+
+.error-container {
+    align-items: flex-start;
+    background-color: var(--white);
+    border-radius: 7px;
+    box-shadow: 2px 0px 4px 0px rgba(0,0,0,0.15),
+                -2px 0px 4px 0px rgba(0,0,0,0.15);
+    display: flex;
+    justify-content: center;
+    margin: 0 5%;
+    padding: 10px;
+}
+
+.error {
+    display: flex;
+    justify-content: center;
+    margin: 30px 15%;
+}
+
+.error-icon {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: var(--delete);
+    border-radius: 7px;
+    color: var(--white);
+    padding: 10px 20px 0 20px;
+}
+
+.error-text {
+    background-color: var(--delete);
+    border-radius: 7px;
+    color: var(--white);
+    padding: 40px;
+
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
+@media only screen and (min-width: 1400px) {
+    .container {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        margin: 10px 25% 0 25%;
+        padding: 15px 15px 20px 15px;
+    }
+    .container header {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        height: 120px;
+    }
+    .container .header-container {
+        margin: 0 8%;
+    }
+    .title-container .avatar {
+        border: 11px solid var(--white);
+    }
+    .title-container .title {
+        margin-left: 2em;
+        top: -86px;
+    }
+    .title-container .title .title-name {
+        font-size: 26px;
+        font-weight: 600;
+    }
+    .title-container .title .title-position {
+        font-size: 17px;
+        margin-top: 5px;
+    }
+
+    .button-container {
+        font-size: 17px;
+    }
+    .button-container .edit-button {
+        height: 45px;
+        width: 125px;
+    }
+    .button-container .delete-button {
+        height: 45px;
+        margin-left: 1.5em;
+        width: 125px;
+    } 
+
+    .card-title {
+        font-size: 18px;
+        margin-bottom: 0.7em;
+    }
+    .card {
+        font-size: 18px;
+    }
+    .card-container {
+        padding: 20px 30px;
+    }
+
+    .superior .superior-info-small {
+        font-size: 16px;
+    }
+
+    .error {
+        font-size: 19px;
+    }
+}
+
+@media only screen and (min-width: 1200px), (max-width: 1200px) {
+    .container {
+        margin: 10px 10% 0 10%;
+    }
+    
+    section {
+        justify-content: space-evenly;
+    }
+
+    .card {
+        width: 30vw;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .container {
+        margin: 10px 5% 0 5%;
+    }
+    .button-container .edit-button {
+        width: 100px;
+    }
+    .button-container .delete-button {
+        width: 100px;
+    }
+    
+    .card {
+        width: 35vw;
+    }
+    .error {
+        margin: 30px 5%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .container {
+        border-radius: 0;
+        box-shadow: none;
+        padding: 15px 15px 20px 15px;
+        margin: 10px 0 0 0;
+    }
+    .container header {
+        height: 130px;
+    }
+    .title-container .avatar {
+        border: 10px solid var(--white);
+    }
+    .title-container .title {
+        top: -85px;
+    }
+    
+    section {
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 0;
+    }
+    section div{
+        margin-bottom: 1em;
+    }
+    .card {
+        width: 70vw;
+    }
+    .error-container {
+        border-radius: 0;
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .button-container .edit-button {
+        height: 37px;
+        width: 80px;
+    }
+    .button-container .delete-button {
+        height: 37px;
+        width: 80px;
+    }
+}
+@media only screen and (max-width: 570px) {
+    .container .header-container {
+        align-items: center;
+        flex-direction: column;
+    }
+    .title-container {
+        flex-direction: column-reverse;
+    }
+    .title-container .avatar {
+        border: 10px solid var(--white);
+        top: -85px;
+    }
+    .title-container .title {
+        margin-left: 0;
+        top: -100px;
+        text-align: center;
+    }
+    .title-container .title .title-position {
+        color: var(--white);
+    }
+    .button-container {
+        position: relative;
+        top: -60px;
+    }
+    .button-container .edit-button {
+        width: 25vw;
+    }
+    .button-container .delete-button {
+        width: 25vw;
+    }
+}

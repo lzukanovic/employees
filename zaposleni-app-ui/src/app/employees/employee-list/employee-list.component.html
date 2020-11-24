@@ -1,0 +1,43 @@
+<table class="tg" *ngIf="employees.length">
+    <thead>
+        <tr>
+            <th></th>
+            <th (click)="sort = 'name'">NAME</th>
+            <th (click)="sort = 'email'">E-MAIL</th>
+            <th (click)="sort = 'age'" class="column-center">AGE</th>
+            <th (click)="sort = 'position'">POSITION</th>
+            <th (click)="sort = 'employment_date'">EMPLOYMENT</th>
+            <th (click)="sort = 'salary'">SALARY</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees; index as i" [routerLink]="['/employees', employee.id]">
+            <td [ngClass]="i%2 == 0 ? 'tr-shade' : 'tr-light'"><img [src]="ImgSrcSmall" alt="User avatar"></td>
+            <td [ngClass]="i%2 == 0 ? 'tr-shade' : 'tr-light'">{{ employee.name }}</td>
+            <td [ngClass]="i%2 == 0 ? 'tr-shade' : 'tr-light'">{{ employee.email }}</td>
+            <td [ngClass]="i%2 == 0 ? 'tr-shade' : 'tr-light'" class="column-center">{{ employee.age }}</td>
+            <td [ngClass]="i%2 == 0 ? 'tr-shade' : 'tr-light'">{{ employee.position }}</td>
+            <td [ngClass]="i%2 == 0 ? 'tr-shade' : 'tr-light'">{{ employee.employment_date | date:'mediumDate' }}</td>
+            <td [ngClass]="i%2 == 0 ? 'tr-shade' : 'tr-light'">{{ employee.salary | currency:'USD':'symbol':'4.1-1' }}</td>
+        </tr>
+    </tbody>
+</table>
+<div id="compressed-list">
+    <div *ngFor="let employee of employees; index as i"
+    [ngClass]="employee.id%2 == 0 ? 'row-light' : 'row-shade'"
+    [routerLink]="['/employees', employee.id]"
+    class="row row-shade">
+
+        <div class="data-1">
+            <img [src]="ImgSrcSmall" alt="User avatar">
+            <div class="data-text">
+                <div class="data-name">{{ employee.name }}</div>
+                <div class="data-email">{{ employee.email }}</div>
+            </div>
+        </div>
+        <div class="data-2">
+            <div class="divider"></div>
+            <div class="position">{{ employee.position | uppercase }}</div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,93 @@
+.cards-container {
+    display: grid;
+    gap: 3em 2em;
+    /* columns will automatically break when each one gets below 260px */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    justify-items: center;
+}
+
+.employee-card {
+    background-color: var(--white);
+    border-radius: 7px;
+    /* box-shadow: 0px 2px 11px 2px rgba(0,0,0,0.1); */
+    box-shadow: 0px 2px 8px 1px rgba(0,0,0,0.15);
+    cursor: pointer;
+    height: 290px;
+    padding: 8px;
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+}
+.employee-card:focus {
+    outline: none;
+}
+
+.card-header {
+    background-color: var(--blue);
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    height: 22%;
+    flex-shrink: 0;
+}
+
+.img-container {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    position: relative;
+    top: -25px;
+}
+
+img {
+    width: 90px;
+    height: 90px;
+}
+
+.avatar {
+    border-radius: 50%;
+    box-sizing: border-box;
+    background-color: var(--white);
+    border: 6px solid var(--white);
+}
+
+.card-body {
+    align-items: center;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+    flex-grow: 1;
+}
+
+.card-title {
+    position: relative;
+    top: -25px;
+    text-align: center;
+}
+.card-title .card-name {
+    font-weight: 600;
+    font-size: 17px;
+}
+.card-title .card-email {
+    font-size: 14px;
+}
+
+.card-data {
+    text-align: center;
+    font-size: 15px;
+    flex-grow: 1;
+}
+
+.card-footer {
+    align-self: stretch;
+    background-color: var(--global-bg);
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    display: flex;
+    font-size: 14px;
+    font-weight: 600;
+    flex-shrink: 0;
+    justify-content: center;
+    padding: 5px;
+}

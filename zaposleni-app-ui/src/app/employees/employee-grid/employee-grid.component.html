@@ -1,0 +1,19 @@
+<div class="cards-container">
+    <div class="employee-card" *ngFor="let employee of employees" [routerLink]="['/employees', employee.id]">
+        <div class="card-header"></div>
+        <div class="img-container">
+            <img class="avatar" [src]="ImgSrc" alt="User avatar">
+        </div>
+        <div class="card-body">
+            <div class="card-title">
+                <div class="card-name">{{ employee.name }}</div>
+                <div class="card-email">{{ employee.email }}</div>
+            </div>
+            <div class="card-data">
+                Employed since: {{ employee.employment_date | date:'mediumDate' }} <br />
+                Salary: {{ employee.salary | currency:'USD':'symbol':'4.2-2' }}
+            </div>
+            <div class="card-footer">{{ employee.position | uppercase }}</div>
+        </div>
+    </div>
+</div>

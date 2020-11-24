@@ -1,0 +1,67 @@
+[
+    {
+        "name": "Luka Pokljuka",
+        "email": "luka.pokljuka@src.si",
+        "mobile_number": "+(386) 31 123 642",
+        "address_street": "Trubarjeva ulica 13",
+        "address_city": "Ljubljana",
+        "birthday": "1998-10-12",
+        "position": "Junior Developer",
+        "employment_date": "2018-11-15",
+        "salary": 26023.37,
+        "superior_name": "Tomaž Kantar",
+        "superior_position": "Project Leader"
+    },
+    {
+        "name": "Kaja Kolaj",
+        "email": "kaja.kolaj@src.si",
+        "mobile_number": "+(386) 31 123 456",
+        "address_street": "Prešernova cesta 13",
+        "address_city": "Ljubljana",
+        "birthday": "1986-10-12",
+        "position": "Senior Developer",
+        "employment_date": "2005-06-12",
+        "salary": 53710.89,
+        "superior_name": "Tomaž Kantar",
+        "superior_position": "Project Leader"
+    },
+    {
+        "name": "Tomaž Kantar",
+        "email": "tomaz.kantar@src.si",
+        "mobile_number": "+(386) 31 645 754",
+        "address_street": "Ljubljanska cesta 54",
+        "address_city": "Maribor",
+        "birthday": "1982-09-12",
+        "position": "Project Leader",
+        "employment_date": "2000-02-27",
+        "salary": 81000.99,
+        "superior_name": "Martin Batagelj",
+        "superior_position": "Teams Manager"
+    },
+    {
+        "name": "Žan Gorenc",
+        "email": "zan.gorenc@src.si",
+        "mobile_number": "+(386) 41 485 781",
+        "address_street": "Rožna cesta 10",
+        "address_city": "Ljubljana, Slovenija",
+        "birthday": "1998-09-12",
+        "position": "Quality Assurance",
+        "employment_date": "2019-11-11",
+        "salary": 20500.15,
+        "superior_name": "Jaka Kumar",
+        "superior_position": "Project Leader"
+    },
+    {
+        "name": "Ana Figovec",
+        "email": "ana.figovec@src.si",
+        "mobile_number": "+(386) 41 246 000",
+        "address_street": "Tržaška cesta 10",
+        "address_city": "Ljubljana, Slovenija",
+        "birthday": "1990-01-01",
+        "position": "Assistant Manager",
+        "employment_date": "2019-11-11",
+        "salary": 60125.15,
+        "superior_name": "Maj Kalskot",
+        "superior_position": "Regional Manager"
+    }
+]
